@@ -49,6 +49,10 @@ table tr .holder {
     background-color: #F5F5F5;
 }
 
+table tr .holder:hover {
+    cursor: pointer;
+}
+
 #pageWrapper {
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */

@@ -172,20 +172,34 @@ function checkFullBoard() {
     return true;
 }
 
+function highlightRow(x, color) {
+    for (var y = 0; y < 6; y++) {
+        $("#" + x + "" + y).css("background-color", color);
+    }
+}
+
 $(document).ready(function() {   
+    $(document).on("contextmenu", function() {
+        return false;
+    });
+    
     $("#displayWinner").hide();
+    $(".holder").css("color", "#D5D8DC");
     
     $(".holder").hover(function() {
         $(this).html("&#x25C9;");
         
         if (turn == 0) {
             $(this).css("color", "#3498DB");
+            highlightRow(parseInt($(this).attr('id')), "#D6EAF8");
         } else {
             $(this).css("color", "#E74C3C");
+            highlightRow(parseInt($(this).attr('id')), "#FADBD8");
         }
     }, function() {
         $(this).html(parseInt($(this).attr("id")) + 1);
-        $(this).css("color", "");
+        $(this).css("color", "#D5D8DC");
+        $(".piece").css("background-color", "white");
     });
     
     $(".holder").mousedown(function() {
@@ -198,5 +212,8 @@ $(document).ready(function() {
     
     $(".holder").mouseup(function() {
         checkWin();
+        
+        $(this).mouseleave().mouseenter();
+        
     });
 });
