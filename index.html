@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=450px, initial-scale=1, user-scalable=0">
+    
+    <title>Lucas Childers | connect4.js</title>
+    <script src="jquery-3.1.1.min.js"></script>     
+    <script src="con4.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="displayWinner" style="display: none;">
+        <div id="winner"></div>
+        <input type="button" id="resetButton" onclick="resetGame();" value="Reset"/>
+    </div>
+    
+    <div id="pageWrapper">
+        <div id="header">connect4.js</div>
+        <a href="https://github.com/lucaschilders/connect4">github</a>
+        
+        <table>
+          <tr>
+            <td class="holder" id="0">1</td>
+            <td class="holder" id="1">2</td>
+            <td class="holder" id="2">3</td>
+            <td class="holder" id="3">4</td>
+            <td class="holder" id="4">5</td>
+            <td class="holder" id="5">6</td>
+            <td class="holder" id="6">7</td>
+          </tr>
+          <tr>
+            <td class="piece" id="00"></td>
+            <td class="piece" id="10"></td>
+            <td class="piece" id="20"></td>
+            <td class="piece" id="30"></td>
+            <td class="piece" id="40"></td>
+            <td class="piece" id="50"></td>
+            <td class="piece" id="60"></td>
+          </tr>
+          <tr>
+            <td class="piece" id="01"></td>
+            <td class="piece" id="11"></td>
+            <td class="piece" id="21"></td>
+            <td class="piece" id="31"></td>
+            <td class="piece" id="41"></td>
+            <td class="piece" id="51"></td>
+            <td class="piece" id="61"></td>
+          </tr>
+          <tr>
+            <td class="piece" id="02"></td>
+            <td class="piece" id="12"></td>
+            <td class="piece" id="22"></td>
+            <td class="piece" id="32"></td>
+            <td class="piece" id="42"></td>
+            <td class="piece" id="52"></td>
+            <td class="piece" id="62"></td>
+          </tr>
+          <tr>
+              <td class="piece" id="03"></td>
+              <td class="piece" id="13"></td>
+              <td class="piece" id="23"></td>
+              <td class="piece" id="33"></td>
+              <td class="piece" id="43"></td>
+              <td class="piece" id="53"></td>
+              <td class="piece" id="63"></td>
+          </tr>
+          <tr>
+              <td class="piece" id="04"></td>
+              <td class="piece" id="14"></td>
+              <td class="piece" id="24"></td>
+              <td class="piece" id="34"></td>
+              <td class="piece" id="44"></td>
+              <td class="piece" id="54"></td>
+              <td class="piece" id="64"></td>
+          </tr>
+          <tr>
+              <td class="piece" id="05"></td>
+              <td class="piece" id="15"></td>
+              <td class="piece" id="25"></td>
+              <td class="piece" id="35"></td>
+              <td class="piece" id="45"></td>
+              <td class="piece" id="55"></td>
+              <td class="piece" id="65"></td>
+          </tr>
+        </table>
+    </div>
+</body>
